@@ -20,7 +20,7 @@ def start(url_path, comment_path):
     driver=None
     try:
         toutiao = TouTiao(username,password,img_path)
-        # toutiao1.login()
+        toutiao.login()
 
         driver = toutiao.get_driver()
         url_items = read_contents(url_path)              # 需要发布评论的url

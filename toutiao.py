@@ -69,6 +69,7 @@ class TouTiao:
                 filename = url.rsplit('/', 1)[1]
             if not os.path.exists(self.save_dir):
                 os.mkdir(self.save_dir)
+            time.sleep(3)
             self.driver.save_screenshot(os.path.join(self.save_dir,filename + ".png"))
         except Exception as e:
             print(str(e))
